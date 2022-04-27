@@ -10,6 +10,10 @@ html{
   
 
 }
+*{ 
+    margin: 0;
+    padding: 0;
+}
     
 body{
     font-family: 'Chakra Petch', sans-serif;
@@ -29,15 +33,17 @@ body{
 
 
 .hero{
-    padding: 20px;
-    width: 95%;
+
+    padding: 10px;
+    width: 98%;
     height: 100vh;
     min-height: 600px;
     max-height: 800px;
     position: relative;
     display: grid;
     grid-template-rows: 30px 1fr;
-    color: aliceblue;
+    border: none;
+  
 
 }
 
@@ -49,7 +55,7 @@ body{
     right: 0;
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(180deg, #0000008c 0%,#0000008c 100%),url(/imagenes/stars.jpg);
+    background-image:linear-gradient(180deg, #0000008c 0%,#0000008c 100%),url(/GilbertoGA.github.io/imagenes/stars.jpg);
     background-size: contain;
     clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0% 54%);
 
@@ -59,9 +65,11 @@ body{
 /* Nav*/
 .nav{
     --padding-container:0;
-    height: 150%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
+    
     
     
 }
@@ -69,12 +77,18 @@ body{
 
 
 .nav_title{
+    color: aliceblue;
     font-weight: 700;
     position: relative;
-    height: 49px;
-    width: 100px;
     
     
+    
+}
+
+.nav_logo{
+    height: 100%;
+    width: 100%;
+    margin-left: 50px;
 }
 
 .nav_title span{
@@ -115,7 +129,6 @@ body{
 
 .nav_menu{
     margin-left: auto;
-    cursor: pointer;
     display: none;
 }
 
@@ -130,7 +143,7 @@ body{
 
 /*Hero container*/
 .hero_container{
-    width: 1172px;
+    width: 100%;
     --padding-container:0;
     display: grid;
     grid-auto-rows: max-content;
@@ -190,7 +203,12 @@ body{
 }
 
 .about_p{
-    width: 700px;
+    font-size: .5cm;
+    color: rgb(162, 157, 167);
+    line-height: 1,7;
+    margin-bottom: 15px;
+    height: auto;
+    
 }
 
 .about_paragraph{
@@ -424,8 +442,14 @@ body{
 /*  Media queries  */
 
 @media (max-width:800px){
+
+    
+        
+   
     .nav_menu{
         display: block;
+        height: 100%;
+        
     }
 
     .nav_link--menu{
@@ -434,7 +458,7 @@ body{
         top: 0;
         left: 0;
         height: 100%;
-        width: 100%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -460,9 +484,24 @@ body{
         cursor: pointer;
     } 
 
-    .hero_title{
-        font-size: 1.5rem;
+    .hero{
+        font-size: 100%;
+        
     }
+
+    .hero_paragraph {
+        padding-right: 0;
+        padding-top: 50px;
+        height: auto;
+       
+    }
+
+    .hero_title{
+        font-size: 2.5rem;
+    }
+
+
+
     .about_main{
         gap: 2em ;
     }
@@ -521,13 +560,30 @@ body{
 }
 
 @media(max-width:600px){
-    .hero_title{
-        font-size: 1rem;
+        
+
+
+    .hero_title .hero_title2{
+        font-size: 2rem;
+        padding-right: 50px;
+    }
+    .hero_paragraph{
+        padding-right: 0;
+        padding-top: 90px;
+        height: auto;
     }
 
     .subtitle{
         font-size:1.8rem; 
     }
+
+    .about_p{
+        padding-right: 20px;
+        justify-content: left;
+
+
+    }
+    
 
     
     
